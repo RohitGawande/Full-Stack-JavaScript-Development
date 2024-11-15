@@ -1,6 +1,3 @@
-Here's a README template for your GitHub repository based on the course curriculum you've shared:
-
----
 
 # Full Stack JavaScript Bootcamp
 
