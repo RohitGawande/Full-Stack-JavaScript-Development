@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>External</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* 1.Univarsal Selector */
+        *{
+            padding: 0;
+            background-color: #4d4d4d;
+            /* ui color picker */
+            color: #ffffff;
+        }
+       
+    /* 2.Individual Selector */
+    p{
+        background-color: #d1ea76;
+    }
+    /* 3.class and id Selector */
+    .warning {
+        background-color: #ef9323;
+        color: #ffffff ;
+    }
+    #danger{
+        background-color: #066344;
+        color: #ffffff ;
+    }
+    /* 4.and selector(Chained) */
+    li.bg-black{
+        background-color: #dccdcd;
+    }
+    /* 5.combined Selector */
+    span,li{
+        background-color: #5709b6;
+    }
+    /* 6.inside an element */
+    div ul li{
+        background-color: #0d8def;
+    }
+    /* 7.direct child */
+    div>li{
+        background-color: #9df213;
+    }
+    /* 8. sibling ~ or + --> */
+    .sibling + p{
+        background-color: #400505;
+    }
+    </style>
+</head>
+<body>
+  
+    <button type="button" class="btn btn-primary">Primary</button>
+    <div>Welcome to live class</div>
+    <span>Span is just a span</span>
+    <p>We all know Paragraph</p>
+    <ul>
+        <li class="bg-black text-white">item1</li>
+        <li class="warning">item2</li>
+        <li id="danger">item3</li>
+        <li class="bg-black">item4</li>
+        <li>item5</li>
+    </ul>
+    <div>
+        <li>awesome</li>
+        <ul>
+            <li>Highlight me</li>
+            <li>Highlight me</li>
+        </ul>
+    </div>
+    <section>
+        <p>Test 1</p>
+        <p class="sibling">Test 2</p>
+        <p >Test 3</p>
+        <p>Test 4</p>
+        <p>Test 5</p>
+    </section> 
+</body>
+</html>
