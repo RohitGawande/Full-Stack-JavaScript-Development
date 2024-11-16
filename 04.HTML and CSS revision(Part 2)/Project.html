@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Layout</title>
+    <style>
+        /* Header Section */
+        header::before {
+            content: "📰 ";
+            color: blue;
+        }
+
+        header h1 {
+            font-size: 2em;
+            text-align: center;
+        }
+
+        /* Main Content */
+        .content > .post {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #f4f4f4;
+            border-radius: 5px;
+        }
+
+        /* Sidebar */
+        .sidebar + .content {
+            margin-left: 250px; /* Assuming sidebar is on the left */
+        }
+
+        .sidebar > p::before {
+            content: "👉 ";
+            color: green;
+        }
+
+        /* Hover Effects */
+        .post:hover {
+            background-color: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Blog</h1>
+    </header>
+
+    <div class="sidebar">
+        <p>Latest Posts</p>
+        <ul>
+            <li>Post 1</li>
+            <li>Post 2</li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <div class="post">
+            <h2>Blog Post Title</h2>
+            <p>This is a sample blog post.</p>
+        </div>
+        <div class="post">
+            <h2>Another Post</h2>
+            <p>This is another sample blog post.</p>
+        </div>
+    </div>
+</body>
+</html>

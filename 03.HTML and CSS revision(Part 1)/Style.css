@@ -26,14 +26,18 @@
     background-color: #8f0202;
     color: antiquewhite;
   } */
-   .para{
+   /* .para{
     height: 500px;
     width: 500px;
     background-color: #8f0202;
     color: rgb(184, 112, 18);
     /* text-align: center; */
     /* text-align: left; */
-    /* text-align: right; */
+    /* text-align: right; 
     text-decoration-line:underline;
     
-   }
+   } */
+   /* body {
+      background-image: url(Background.png);
+      background-size: cover; /* Ensures the image covers the entire area 
+  }    */
