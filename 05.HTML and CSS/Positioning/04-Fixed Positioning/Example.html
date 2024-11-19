@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixed Position</title>
+    <style>
+        .box {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+            background-color: lightpink;
+        }
+
+        .content {
+            height: 2000px;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <p>Scroll down the page to see the fixed box.</p>
+    </div>
+    <div class="box">Fixed</div>
+</body>
+</html>

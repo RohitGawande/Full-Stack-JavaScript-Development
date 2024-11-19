@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Position</title>
+    <style>
+        .header {
+            position: sticky;
+            top: 0; /* Sticks to the top when scrolled */
+            background-color: lightblue;
+            padding: 10px;
+            text-align: center;
+            border: 2px solid black;
+        }
+
+        .content {
+            height: 2000px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">Sticky Header</div>
+    <div class="content">
+        <p>Scroll down to see the sticky header in action.</p>
+        <p>Lorem ipsum dolor sit amet...</p>
+    </div>
+</body>
+</html>

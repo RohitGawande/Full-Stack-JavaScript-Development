@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Align-Self Example</title>
+    <style>
+        .container {
+            display: flex;
+            align-items: center; /* Default alignment for all items */
+            height: 200px;
+            border: 2px solid #ccc;
+            padding: 20px;
+        }
+        .item {
+            width: 100px;
+            height: 50px;
+            background-color: lightyellow;
+            text-align: center;
+            line-height: 50px;
+        }
+        .special {
+            align-self: flex-end; /* Aligns only this item to the bottom */
+            background-color: lightpink;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item special">Item 3</div>
+    </div>
+</body>
+</html>

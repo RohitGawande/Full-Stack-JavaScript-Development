@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Flex-Shrink Example</title>
+    <style>
+        .container {
+            display: flex;
+            width: 300px; /* Narrow container width */
+            gap: 10px;
+            border: 2px solid #ccc;
+            padding: 20px;
+        }
+        .item {
+            flex-shrink: 1; /* Allow shrinking */
+            width: 200px;  /* Set fixed width */
+            height: 100px;
+            background-color: lightcoral;
+            text-align: center;
+            line-height: 100px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+    </div>
+</body>
+</html>

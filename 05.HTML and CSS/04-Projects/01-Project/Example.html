@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Navbar with Flexbox</title>
+    <style>
+        /* Basic reset */
+        body, h1, nav {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+        }
+        
+        /* Navbar styling */
+        nav {
+            position: sticky;
+            top: 0;
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+        
+        nav a:hover {
+            background-color: #575757;
+        }
+
+        /* Content styling */
+        section {
+            padding: 20px;
+            height: 1500px; /* To make sure the page scrolls */
+            background-color: #f4f4f4;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">My Website</div>
+        <div class="links">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Content -->
+    <section>
+        <h1>Welcome to My Website</h1>
+        <p>Scroll down to see the sticky navbar in action.</p>
+    </section>
+
+</body>
+</html>
