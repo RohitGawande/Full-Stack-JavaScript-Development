@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Dashboard</title>
+    <style>
+        /* Basic styling for the page */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* Container for the dashboard */
+        .dashboard {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 columns by default */
+            gap: 20px;
+            padding: 20px;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+
+        /* Each widget box */
+        .widget {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
+        }
+
+        .widget:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .widget h2 {
+            margin-top: 0;
+            font-size: 1.4rem;
+            color: #333;
+        }
+
+        .widget img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        .widget p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        /* Responsive: On smaller screens, show 2 columns */
+        @media (max-width: 768px) {
+            .dashboard {
+                grid-template-columns: repeat(2, 1fr); /* 2 columns */
+            }
+        }
+
+        /* Responsive: On very small screens, show 1 column */
+        @media (max-width: 480px) {
+            .dashboard {
+                grid-template-columns: 1fr; /* 1 column */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="dashboard">
+        <!-- Widget 1 -->
+        <div class="widget">
+            <img src="Orange & Black Modern Personal Branding Youtube Banner.png" alt="Placeholder Image">
+            <h2>System Design Series</h2>
+            <a href="https://rohit253.hashnode.dev/system-design-series-chapter-2-why-do-we-need-system-design" target="_blank" >Hashnode(Articles)</a>
+            <p>Welcome to my System Design Series on Hashnode! This series is designed to help you build a deep understanding of system design, starting with fundamental principles and advancing through real-world system design problems.</p>
+        </div>
+        
+        <!-- Widget 2 -->
+        <div class="widget">
+            <img src="https://via.placeholder.com/300" alt="Placeholder Image">
+            <h2>Widget 2</h2>
+            <p>Here’s some content for widget 2. This can be any data or visual content you want to display.</p>
+        </div>
+        
+        <!-- Widget 3 -->
+        <div class="widget">
+            <img src="https://via.placeholder.com/300" alt="Placeholder Image">
+            <h2>Widget 3</h2>
+            <p>This is widget 3. You can add interactive charts, stats, or anything you like here.</p>
+        </div>
+
+        <!-- Widget 4 -->
+        <div class="widget">
+            <img src="https://via.placeholder.com/300" alt="Placeholder Image">
+            <h2>Widget 4</h2>
+            <p>This is widget 4. Make it dynamic with JavaScript or simply use it to display content.</p>
+        </div>
+
+        <!-- Widget 5 -->
+        <div class="widget">
+            <img src="https://via.placeholder.com/300" alt="Placeholder Image">
+            <h2>Widget 5</h2>
+            <p>This is widget 5. Add descriptions, links, or any relevant content for your dashboard.</p>
+        </div>
+
+        <!-- Widget 6 -->
+        <div class="widget">
+            <img src="https://via.placeholder.com/300" alt="Placeholder Image">
+            <h2>Widget 6</h2>
+            <p>Widget 6 could display some other type of content, like news, updates, or more visuals.</p>
+        </div>
+    </div>
+
+</body>
+</html>
