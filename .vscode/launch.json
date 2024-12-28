@@ -7,8 +7,8 @@
         {
             "type": "chrome",
             "request": "launch",
-            "name": "Open Basic3.html",
-            "file": "c:\\Users\\Asus\\Desktop\\FULL STACK JavaScript Development\\CSS\\Basic3.html"
+            "name": "Launch Current File",
+            "file": "${file}"
         }
     ]
 }

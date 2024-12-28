@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            text-align: center;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    Enter any number: <input id="num" type="number">
+    <br><br>
+    <button onclick="factors()">Check</button>
+    <p id="res"></p>
+
+    <script>
+        function factors() {
+            var n = Number(document.getElementById("num").value);
+            var str = ""; // Initialize str to store factors
+            for (var i = 1; i <= n / 2; i++) {
+                if (n % i === 0) {
+                    str += i + "<br>";
+                }
+            }
+            str += n; // Include the number itself as a factor
+            document.getElementById("res").innerHTML = "Factors:<br>" + str;
+        }
+    </script>
+</body>
+</html>
