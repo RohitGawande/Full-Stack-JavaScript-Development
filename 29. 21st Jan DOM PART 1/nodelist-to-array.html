@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>NodeList Conversion</title>
+</head>
+<body>
+  <h3>Header A</h3>
+  <h3>Header B</h3>
+  <h3>Header C</h3>
+
+  <script>
+    const headersNodeList = document.querySelectorAll("h3");
+
+    // Convert NodeList using Array.from()
+    const headersArray1 = Array.from(headersNodeList);
+    headersArray1.map(h3 => console.log("Array.from: " + h3.innerText));
+
+    // Convert NodeList using Spread Operator
+    const headersArray2 = [...headersNodeList];
+    headersArray2.map(h3 => console.log("Spread Operator: " + h3.innerText));
+  </script>
+</body>
+</html>

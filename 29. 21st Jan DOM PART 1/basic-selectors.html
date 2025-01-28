@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Basic Selectors</title>
+</head>
+<body>
+  <h1>Main Header</h1>
+  <h3>Header 1</h3>
+  <h3>Header 2</h3>
+  <button id="changeHeaders">Change Header Texts</button>
+
+  <script>
+    // Selecting single element
+    const firstH3 = document.querySelector("h3");
+    console.log("First H3: " + firstH3.innerText);
+
+    // Selecting all matching elements
+    const allH3s = document.querySelectorAll("h3");
+    allH3s.forEach(h3 => console.log(h3.innerText));
+
+    // Changing all header texts
+    document.getElementById("changeHeaders").addEventListener("click", () => {
+      allH3s.forEach((h3, index) => {
+        h3.innerText = `Updated Header ${index + 1}`;
+      });
+    });
+  </script>
+</body>
+</html>
