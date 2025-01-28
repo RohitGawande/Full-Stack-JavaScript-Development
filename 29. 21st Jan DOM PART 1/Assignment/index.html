@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Circle Click Effect</title>
+  <style>
+    body {
+      height: 100vh;
+      background-color: #f0f8ff;
+      cursor: crosshair;
+      overflow: hidden;
+    }
+    .circle {
+      position: absolute;
+      border-radius: 50%;
+      animation: fade-out 1.5s forwards;
+    }
+    @keyframes fade-out {
+      to {
+        opacity: 0;
+        transform: scale(2);
+      }
+    }
+  </style>
+</head>
+<body>
+  <script>
+    document.addEventListener('click', (event) => {
+      const circle = document.createElement('div');
+      const size = Math.floor(Math.random() * 50) + 10;
+      const color = getRandomColor();
+
+      circle.classList.add('circle');
+      circle.style.width = `${size}px`;
+      circle.style.height = `${size}px`;
+      circle.style.backgroundColor = color;
+      circle.style.top = `${event.clientY - size / 2}px`;
+      circle.style.left = `${event.clientX - size / 2}px`;
+
+      document.body.appendChild(circle);
+      setTimeout(() => circle.remove(), 1500);
+    });
+
+    function getRandomColor() {
+      const letters = '0123456789ABCDEF';
+      let color = '#';
+      for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
+  </script>
+</body>
+</html>

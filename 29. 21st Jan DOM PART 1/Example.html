@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM </title>
+</head>
+<body>
+    <h1>   Hello World </h1>
+    <p class="Basic" id="Basic2">Lorem ipsum doctetatis dicta dolor laudantium.</p>
+    <ul>
+        <li>One</li>
+        <li>Two</li>
+    </ul>
+    <ul>
+        <li class="tech">JavaScript</li>
+        <li class="tech">Nodejs</li>
+        <li class="tech">Reactjs</li>
+    </ul>
+    <script>
+    //    let val=document.getElementById("Basic2")
+    //    console.log(val.innerHTML)
+    //    console.log(val.innerText)
+        // let val=document.getElementsByClassName("tech")
+        // console.log(val)
+        // console.log(val[0].innerHTML)
+        // console.log(val[1].innerHTML)
+        // val[1].innerHTML="Rohit"
+        // console.log(val[1].innerHTML)
+        // val[2].innerHTML="<h1>Gawande<h1>"
+        // val[2].innerText="<h1>Gawande<h1>"
+        // let val1=document.getElementsByTagName("ul")
+        // let val2=document.getElementsByTag("ul")
+        let h1=document.querySelector("h1").innerText
+        console.log(h1)
+        let h2=document.querySelector(".Basic").innerText
+        console.log(h2)
+        let h3=document.querySelector("#Basic2").innerText
+        console.log(h3)
+</script>
+</body>
+</html>

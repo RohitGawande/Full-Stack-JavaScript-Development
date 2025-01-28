@@ -33,3 +33,36 @@ console.log(arr1.join(' Rohit '));
 console.log(typeof arr1);
 let maths=[1,4,9,16];
 console.log(maths.map(Math.sqrt));
+console.log(maths.pop());
+console.log(maths);
+console.log(maths.reverse());
+console.log(maths.shift());
+let arr5=['Egg','Fish','Gate','Horse','Apple','Ball','Cat','Dog'];
+console.log(arr5.sort());
+console.log(arr5.reverse(arr5.sort()));
+let arr6=['Egg','Fish','Gate','Horse','Apple','Ball','Cat','Dog'];
+
+console.log(arr6.unshift("Apple1","Bat1"));
+let name3="Rohit";
+let arr7=name3.split('');
+console.log(arr7);
+
+//for of
+let UpperFr=[];
+for(const UpperL of arr6){
+    UpperFr.push(UpperL.toUpperCase());
+}
+console.log(UpperFr);
+//Break and COntinue 
+for (let index = 0; index <=5; index++) {
+    if (index==3) {
+        break;
+    }
+    console.log(index);
+}
+for (let index = 0; index <=5; index++) {
+    if (index==3) {
+        continue;
+    }
+    console.log(index+" ");
+}
