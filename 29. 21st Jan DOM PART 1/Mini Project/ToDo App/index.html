@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic To-Do List</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f3f3f3;
+    }
+    .task {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      background-color: #ffffff;
+      margin: 5px 0;
+      border-radius: 5px;
+    }
+    .completed {
+      text-decoration: line-through;
+      color: grey;
+    }
+  </style>
+</head>
+<body>
+  <h1>To-Do List App</h1>
+
+  <input type="text" id="taskInput" placeholder="Enter a task" />
+  <button id="addTaskBtn">Add Task</button>
+
+  <h2>Tasks</h2>
+  <div id="taskList"></div>
+
+  <h3>Filter Tasks:</h3>
+  <button id="showAll">All</button>
+  <button id="showCompleted">Completed</button>
+  <button id="showPending">Pending</button>
+
+  <script src="script.js"></script>
+</body>
+</html>

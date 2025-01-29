@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Alerts and Prompts</title>
+</head>
+<body>
+  <h1>Interactive Alerts and Prompts Examples</h1>
+  
+  <button onclick="showAlert()">Simple Alert</button>
+  <button onclick="showDelayedAlert()">Delayed Alert (2 Seconds)</button>
+  <button onclick="getUserConfirmation()">Confirmation Dialog</button>
+  <button onclick="getUserInput()">Prompt for Name</button>
+
+  <script>
+    // Simple alert
+    function showAlert() {
+      alert("Hello, Rohit!");
+    }
+
+    // Delayed alert after 2 seconds
+    function showDelayedAlert() {
+      setTimeout(() => {
+        alert("This is a delayed alert!");
+      }, 2000);
+    }
+
+    // Confirmation dialog example
+    function getUserConfirmation() {
+      let userConfirmation = confirm("Are you sure?");
+      if (userConfirmation) {
+        console.log("User pressed OK.");
+        alert("You pressed OK!");
+      } else {
+        console.log("User pressed Cancel.");
+        alert("You pressed Cancel!");
+      }
+    }
+
+    // Prompt for user input
+    function getUserInput() {
+      let userName = prompt("What is your name?");
+      if (userName) {
+        console.log(`Hello, ${userName}!`);
+        alert(`Hello, ${userName}!`);
+      } else {
+        alert("No name entered.");
+      }
+    }
+  </script>
+</body>
+</html>
