@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Complex Selectors</title>
+</head>
+<body>
+  <p id="uniqueParagraph">This is an ID-based paragraph</p>
+  <p class="common">Class-based paragraph 1</p>
+  <p class="common">Class-based paragraph 2</p>
+  <input type="text" name="username" value="Rohit">
+
+  <script>
+    // ID Selector
+    let uniqueParagraph = document.querySelector("#uniqueParagraph");
+    console.log(uniqueParagraph.innerText);
+
+    // Class Selector
+    let classParagraphs = document.querySelectorAll(".common");
+    classParagraphs.forEach(p => console.log(p.innerText));
+
+    // Attribute Selector
+    let inputField = document.querySelector('input[name="username"]');
+    console.log("Input value: " + inputField.value);
+  </script>
+</body>
+</html>
