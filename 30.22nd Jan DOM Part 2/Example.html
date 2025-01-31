@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript</h1>
+    <ul>
+
+    </ul>
+    <button onclick="maths()" id="fsjs">Submit</button>
+    <!-- <h1 class="title" style="font-size: 25px; color: green;"></h1> -->
+    <p id="js"></p>
+    <script>
+        const list=`
+         <li>Rohit</li>
+         <li>Shikhar</li>
+         <li>Virat</li>
+         <li>Dhoni</li>
+        `;
+        const l=document.querySelector("ul");
+        l.innerHTML=list;
+        let title=document.createElement("h2")
+        title.className="title"
+        title.style.fontSize="25px"
+        title.style.color="green"
+        title.textContent="creating new Element";
+        console.log(title)
+        document.body.appendChild(title)
+        for (let index = 0; index < 3; index++) {
+           let para = document.createElement("p")
+           para.className="FSJS"
+           para.style.fontSize="16px"
+            console.log(para)
+            para.textContent=index;
+            document.body.appendChild(para)
+        }
+        function maths() {
+          let value=  prompt("Solve this 3*10")
+          if (value==30) {
+            document.getElementById("js").innerText="Success"
+            document.getElementById("fsjs").style.backgroundColor="Green"
+          }else{
+            document.getElementById("js").innerText="Failed"
+            document.getElementById("fsjs").style.backgroundColor="red"
+          }
+        }
+</script>
+</body>
+</html>

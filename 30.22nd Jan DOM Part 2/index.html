@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript</h1>
+    <ul>
+
+    </ul>
+    <!-- <h1 class="title" style="font-size: 25px; color: green;"></h1> -->
+    <script>
+        const list=`
+         <li>Rohit</li>
+         <li>Shikhar</li>
+         <li>Virat</li>
+         <li>Dhoni</li>
+        `;
+        const l=document.querySelector("ul");
+        l.innerHTML=list;
+        let title=document.createElement("h2")
+        title.className="title"
+        title.style.fontSize="25px"
+        title.style.color="green"
+        title.textContent="creating new Element";
+        console.log(title)
+        document.body.appendChild(title)
+</script>
+</body>
+</html>
