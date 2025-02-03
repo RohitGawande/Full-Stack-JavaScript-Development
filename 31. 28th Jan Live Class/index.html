@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Introduction to Higher-Order Functions and Callbacks</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+    }
+    main {
+      padding: 2rem;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    code {
+      background-color: #e8e8e8;
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+      font-size: 1rem;
+      color: #d63384;
+    }
+    pre {
+      background-color: #272822;
+      color: #f8f8f2;
+      padding: 1rem;
+      overflow-x: auto;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Introduction to Higher-Order Functions and Callbacks</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>What Are Higher-Order Functions?</h2>
+      <p>A Higher-Order Function (HOF) is a function that either:</p>
+      <ul>
+        <li>Accepts other functions as arguments (callbacks)</li>
+        <li>Returns a function as its result</li>
+      </ul>
+      <p>They help make code more abstract, reusable, and easier to manage.</p>
+    </section>
+
+    <section>
+      <h2>Callback Functions</h2>
+      <p>A callback function is a function passed as an argument to another function and executed later.</p>
+      <p>This pattern is essential in JavaScript for asynchronous operations and cleaner code logic.</p>
+
+      <h3>Example: Cube Calculation using Callback</h3>
+      <pre><code>const callback = (n) => {
+  return n ** 2;
+};
+
+function cube(callback, n) {
+  return callback(n) * n;
+}
+
+console.log(cube(callback, 2)); // Output: 8
+</code></pre>
+    </section>
+
+    <section>
+      <h2>Why Use Higher-Order Functions?</h2>
+      <ul>
+        <li><strong>Code Abstraction:</strong> Encapsulates repetitive logic, improving code reusability.</li>
+        <li><strong>Cleaner Code:</strong> Callbacks maintain logical separation, following the DRY principle.</li>
+        <li><strong>Asynchronous Programming:</strong> Essential for non-blocking operations in JavaScript.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Real-World Example: Asynchronous Callback</h2>
+      <p>Using <code>setTimeout</code> to demonstrate asynchronous callbacks:</p>
+      <pre><code>setTimeout(() => {
+  console.log("Hello, Rohit!"); 
+}, 2000);</code></pre>
+      <p>This code logs <strong>Hello, Rohit!</strong> to the console after 2 seconds.</p>
+    </section>
+  </main>
+
+</body>
+</html>

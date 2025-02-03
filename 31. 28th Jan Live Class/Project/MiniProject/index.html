@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Shopping Cart System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+        }
+        .container {
+            margin: 20px;
+        }
+        .cart, .available-items {
+            margin-bottom: 20px;
+        }
+        .cart ul, .available-items ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .cart li, .available-items li {
+            padding: 8px;
+            background-color: #fff;
+            margin: 5px 0;
+            border: 1px solid #ddd;
+        }
+        .button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+        .result {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Online Shopping Cart System</h1>
+    </header>
+
+    <div class="container">
+        <section class="available-items">
+            <h2>Available Items</h2>
+            <ul id="items-list">
+                <!-- List of available items will appear here -->
+            </ul>
+        </section>
+
+        <section class="cart">
+            <h2>Shopping Cart</h2>
+            <ul id="cart-list">
+                <!-- Cart items will appear here -->
+            </ul>
+            <p id="total-price" class="result">Total Price: $0</p>
+        </section>
+
+        <section>
+            <h2>Actions</h2>
+            <button class="button" id="add-phone">Add Phone to Cart</button>
+            <button class="button" id="add-laptop">Add Laptop to Cart</button>
+            <button class="button" id="add-headphones">Add Headphones to Cart</button>
+            <button class="button" id="add-smartwatch">Add Smart Watch to Cart</button>
+            <button class="button" id="filter-affordable">Show Affordable Items (Under $500)</button>
+        </section>
+    </div>
+
+    <script>
+        const availableItems = [
+            { name: "Phone", price: 500 },
+            { name: "Laptop", price: 1000 },
+            { name: "Headphones", price: 100 },
+            { name: "Smart Watch", price: 200 },
+            { name: "Tablet", price: 400 }
+        ];
+
+        let cartItems = [];
+
+        function updateItemsList() {
+            const itemsList = document.getElementById("items-list");
+            itemsList.innerHTML = ""; // Clear current items list
+            availableItems.forEach(item => {
+                const li = document.createElement("li");
+                li.textContent = `${item.name} - $${item.price}`;
+                itemsList.appendChild(li);
+            });
+        }
+
+        function addItemToCart(itemName) {
+            const item = availableItems.find(product => product.name === itemName);
+            if (item) {
+                cartItems.push(item);
+                alert(`${itemName} added to the cart.`);
+                updateCartList();
+                updateTotalPrice();
+            } else {
+                alert(`${itemName} is not available.`);
+            }
+        }
+
+        function updateCartList() {
+            const cartList = document.getElementById("cart-list");
+            cartList.innerHTML = ""; // Clear current cart
+            cartItems.forEach(item => {
+                const li = document.createElement("li");
+                li.textContent = `${item.name} - $${item.price}`;
+                cartList.appendChild(li);
+            });
+        }
+
+        function updateTotalPrice() {
+            const total = cartItems.reduce((acc, item) => acc + item.price, 0);
+            document.getElementById("total-price").textContent = `Total Price: $${total}`;
+        }
+
+        function filterAffordableItems() {
+            const affordableItems = availableItems.filter(item => item.price <= 500);
+            const itemsList = document.getElementById("items-list");
+            itemsList.innerHTML = ""; // Clear current items list
+            affordableItems.forEach(item => {
+                const li = document.createElement("li");
+                li.textContent = `${item.name} - $${item.price}`;
+                itemsList.appendChild(li);
+            });
+        }
+
+        // Event Listeners for Add to Cart
+        document.getElementById("add-phone").addEventListener("click", () => addItemToCart("Phone"));
+        document.getElementById("add-laptop").addEventListener("click", () => addItemToCart("Laptop"));
+        document.getElementById("add-headphones").addEventListener("click", () => addItemToCart("Headphones"));
+        document.getElementById("add-smartwatch").addEventListener("click", () => addItemToCart("Smart Watch"));
+        
+        // Event Listener for Filter Affordable Items
+        document.getElementById("filter-affordable").addEventListener("click", filterAffordableItems);
+
+        // Initialize the available items list on page load
+        updateItemsList();
+    </script>
+</body>
+</html>

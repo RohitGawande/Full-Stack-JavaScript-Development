@@ -1,0 +1,149 @@
+<!-- Project 1: Simplified To-Do List with Callbacks -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List with Callbacks</title>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; padding: 2em; }
+    input { padding: 0.5em; margin: 1em 0; }
+  </style>
+</head>
+<body>
+  <h1>To-Do List with Callbacks</h1>
+  <input type="text" id="taskInput" placeholder="Add a new task...">
+  <button onclick="addTask()">Add Task</button>
+  <ul id="taskList"></ul>
+
+  <script>
+    const tasks = [];
+
+    function addTask() {
+      const taskInput = document.getElementById('taskInput');
+      const task = taskInput.value.trim();
+      if (task) {
+        tasks.push(task);
+        displayTasks();
+        taskInput.value = ''; // Clear input field
+      }
+    }
+
+    function displayTasks() {
+      const taskList = document.getElementById('taskList');
+      taskList.innerHTML = '';
+      tasks.forEach((task, index) => {
+        const li = document.createElement('li');
+        li.textContent = task;
+        taskList.appendChild(li);
+      });
+    }
+  </script>
+</body>
+</html>
+
+<!-- Project 2: Student Marks Calculator -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Marks Calculator</title>
+</head>
+<body>
+  <h1>Student Marks Calculator</h1>
+  <p>Scores: 85, 90, 78, 92, 88</p>
+  <button onclick="calculateMarks()">Calculate Total & Average</button>
+  <p id="result"></p>
+
+  <script>
+    const studentScores = [85, 90, 78, 92, 88];
+
+    function calculateMarks() {
+      const totalScore = studentScores.reduce((acc, score) => acc + score, 0);
+      const averageScore = totalScore / studentScores.length;
+      document.getElementById('result').innerText = `Total: ${totalScore}, Average: ${averageScore.toFixed(2)}`;
+    }
+  </script>
+</body>
+</html>
+
+
+<!-- Project 4: String Transformation Tool -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>String Transformation Tool</title>
+</head>
+<body>
+  <h1>String Transformation Tool</h1>
+  <p>Strings: hello, world, rohit, javascript</p>
+  <button onclick="transformStrings()">Transform Strings</button>
+  <ul id="transformedList"></ul>
+
+  <script>
+    const strings = ["hello", "world", "rohit", "javascript"];
+
+    function transformStrings() {
+      const transformedList = document.getElementById('transformedList');
+      transformedList.innerHTML = '';
+
+      const capitalizedStrings = strings.map(str => str.toUpperCase());
+      capitalizedStrings.forEach(str => {
+        const li = document.createElement('li');
+        li.textContent = str;
+        transformedList.appendChild(li);
+      });
+    }
+  </script>
+</body>
+</html>
+
+<!-- Project 5: Expense Tracker App -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Tracker App</title>
+</head>
+<body>
+  <h1>Expense Tracker App</h1>
+  <p>Expenses: Food - $150, Transport - $50, Entertainment - $200, Groceries - $300</p>
+  <button onclick="analyzeExpenses()">Analyze Expenses</button>
+  <ul id="expenseSummary"></ul>
+
+  <script>
+    const expenses = [
+      { category: "Food", amount: 150 },
+      { category: "Transport", amount: 50 },
+      { category: "Entertainment", amount: 200 },
+      { category: "Groceries", amount: 300 },
+      { category: "Food", amount: 100 }
+    ];
+
+    function analyzeExpenses() {
+      const expenseSummary = document.getElementById('expenseSummary');
+      expenseSummary.innerHTML = '';
+
+      const totalExpenses = expenses.reduce((acc, expense) => acc + expense.amount, 0);
+      const categorySummary = expenses.reduce((acc, expense) => {
+        acc[expense.category] = (acc[expense.category] || 0) + expense.amount;
+        return acc;
+      }, {});
+
+      const totalLi = document.createElement('li');
+      totalLi.textContent = `Total Expenses: $${totalExpenses}`;
+      expenseSummary.appendChild(totalLi);
+
+      for (const category in categorySummary) {
+        const li = document.createElement('li');
+        li.textContent = `${category}: $${categorySummary[category]}`;
+        expenseSummary.appendChild(li);
+      }
+    }
+  </script>
+</body>
+</html>
